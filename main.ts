@@ -1,0 +1,16 @@
+input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Heart)
+    music.play(music.tonePlayable(988, music.beat(BeatFraction.Half)), music.PlaybackMode.UntilDone)
+    serial.writeLine("Key A")
+    basic.pause(20)
+    basic.showIcon(IconNames.Yes)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Square)
+    music.play(music.tonePlayable(659, music.beat(BeatFraction.Quarter)), music.PlaybackMode.UntilDone)
+    serial.writeLine("Key B")
+    basic.pause(20)
+    basic.showIcon(IconNames.Yes)
+})
+basic.showIcon(IconNames.Yes)
+serial.redirectToUSB()
